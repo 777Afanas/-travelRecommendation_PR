@@ -1,6 +1,76 @@
-nav {
+:root {
+    /* fonts */
+    --main-font: Arial, sans-serif;
+
+    /* text colors */
+    --main-txt-cl: aliceblue;
+    --accent-txt-cl: #ff6c00;
+
+    /* bgcolors */
+    --bg-cl: grey;
+
+    /* others */
+}
+
+body {
+    font-family: var(--main-font);
+    color: var(--main-txt-cl);
+    background-color: var(--bg-cl);
+}
+
+/* reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+/* img {
+    display: block;
+} */
+
+.link {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 
+==========
+Header section
+===========
+*/
+
+.header {
     background-color: black;
-    /* padding: 20px; */
+    /* background-color: white;
+    padding: 15px;
+    border-radius: 60px; */
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+.header-link:hover,
+.header-link:focus {
+    color: var(--accent-txt-cl);
+}
+
+.header-link-current {
+    color: var(--accent-txt-cl); }
+
+nav {
+    /* background-color: black; */
+    padding: 20px;
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
@@ -31,23 +101,15 @@ nav a {
     font-weight: bold;
 }
 
-.header {
-    background-color: white;
-    padding: 15px;  
-    border-radius: 60px;
-}
+
  nav ul li input {
     border: none;
     /* padding: 10px; */
     white-space: pre-line;
  }
 
-   body {
-       font-family: Arial, sans-serif;
-       /* margin: 20px; */
-   }
-
-        button {
+ 
+ button {
             padding: 7px 15px;
             background-color: #4CAF50;
             color: white;
