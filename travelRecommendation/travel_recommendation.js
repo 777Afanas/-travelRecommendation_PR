@@ -20,7 +20,7 @@ function searchRecommendation() {
 
       data[keywords].forEach(function (keyword) {
         if (keywords === "beaches" || keywords === "temples") {
-          // resultDiv.innerHTML += `<img src="${beach.imageUrl}" alt="hjh">`;
+          // resultDiv.innerHTML += `<img src="${keyword.imageUrl}" alt="hjh">`;
           resultDiv.innerHTML += `<h2>${keyword.name}</h2>`;
           resultDiv.innerHTML += `<p>${keyword.description}</p>`;
         } else if (keywords === "countries") {
