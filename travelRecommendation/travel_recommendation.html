@@ -3,142 +3,157 @@
   <head>
     <meta charset="UTF-8" />
     <title>TravelRecommendation</title>
-    <!-- Font start -->
+    <!-- Fonts start -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
-    <!-- Font end -->
+    <!-- Fonts end --> 
+    <!-- Normalize start -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Normalize end --> 
     <link rel="stylesheet" href="./travel_recommendation.css" />
   </head>
 
   <body>
     <!-- Header section -->
     <header class="header">
-      <a class="logo link" href="/">TravelBloom</a>
-      <nav class="header-nav">
-        <ul class="header-list list">
-          <li class="header-item">
-            <a
-              class="header-link header-link-current link"
-              href="./travel_recommendation.html"
-              id="home"
-              >Home</a
-            >
-          </li>
-          <li class="header-item">
-            <a class="header-link link" href="./travel_about.html" id="about"
-              >About Us</a
-            >
-          </li>
-          <li class="header-item">
-            <a
-              class="header-link link"
-              href="./travel_contact.html"
-              id="contact"
-              >Contact Us</a
-            >
-          </li>
-        </ul>
-      </nav>
-      <div class="header-search">
-        <input
-          class="header-input"
-          type="text"
-          id="recommendationInput"
-          placeholder="Enter a destination or keyword"
-        />
-        <button class="btn btn-search" id="btnSearch">Search</button>
-        <button class="btn btn-clear" id="btnClear">Clear</button>
+      <div class="container header-container">
+        <a class="logo link" href="/"><span>&#9992;</span>TravelBloom</a>
+        <nav class="header-nav">
+          <ul class="header-list list">
+            <li class="header-item">
+              <a
+                class="header-link header-link-current link"
+                href="./travel_recommendation.html"
+                id="home"
+                >Home</a
+              >
+            </li>
+            <li class="header-item">
+              <a class="header-link link" href="./travel_about.html" id="about"
+                >About Us</a
+              >
+            </li>
+            <li class="header-item">
+              <a
+                class="header-link link"
+                href="./travel_contact.html"
+                id="contact"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="header-search">
+          <input
+            class="header-input"
+            type="text"
+            id="recommendationInput"
+            placeholder="Enter a destination or keyword"
+          />
+          <button class="btn btn-search" id="btnSearch">Search</button>
+          <button class="btn btn-clear" id="btnClear">Clear</button>
+        </div>
       </div>
     </header>
     <!-- Main section -->
     <main>
       <!-- Hero section -->
       <section class="hero">
-        <div>
-          <!-- 
-        <ul class="hero-list list">
-          <li class="hero-item">
-            <a
-              class="hero-link link"
-              href=""
-              target="_blank"
-              rel="noopener no-referrer"
-              aria-label="instagram"
-              ><svg class="tm-icon" width="20" height="20">
-                <use
-                  href="./images/icons/symbol-defs.svg#tm-instagram"
-                ></use></svg
-            ></a>
-          </li>
-          <li class="hero-item">
-            <a
-              class="t-link link"
-              href=""
-              target="_blank"
-              rel="noopener no-referrer"
-              aria-label="twitter"
-              ><svg class="tm-icon" width="20" height="20">
-                <use
-                  href="./images/icons/symbol-defs.svg#tm-twitter"
-                ></use></svg
-            ></a>
-          </li>
-          <li class="hero-item">
-            <a
-              class="t-link link"
-              href=""
-              target="_blank"
-              rel="noopener no-referrer"
-              aria-label="facebook"
-              ><svg class="tm-icon" width="20" height="20">
-                <use
-                  href="./images/icons/symbol-defs.svg#tm-facebook"
-                ></use></svg
-            ></a>
-          </li>
-          <li class="hero-item">
-            <a
-              class="t-link link"
-              href=""
-              target="_blank"
-              rel="noopener no-referrer"
-              aria-label="linkedin"
-              ><svg class="tm-icon" width="20" height="20">
-                <use
-                  href="./images/icons/symbol-defs.svg#tm-linkedin"
-                ></use></svg
-            ></a>
-          </li>
-        </ul> 
-
-         -->
-        </div>
-        <div>
-          <h1 class="main-title">
-            EXPLORE<br />
-            DREAM<br />
-            DESTINATION
-          </h1>
-          <p class="hero-desc">
-            It encourages exploration of unfamiliar<br />
-            territories, embarcing diverse cultures and<br />
-            landscapes
-          </p>
-          <button class="hero-btn" id="btnHero">BOOK NOW</button>
-        </div>
-        <div class="searchRecommendation">
-          <div class="result" id="resultRec"></div>
+        <div class="container">
+          <div>
+            <!-- 
+          <ul class="hero-list list">
+            <li class="hero-item">
+              <a
+                class="hero-link link"
+                href=""
+                target="_blank"
+                rel="noopener no-referrer"
+                aria-label="instagram"
+                ><svg class="tm-icon" width="20" height="20">
+                  <use
+                    href="./images/icons/symbol-defs.svg#tm-instagram"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="hero-item">
+              <a
+                class="t-link link"
+                href=""
+                target="_blank"
+                rel="noopener no-referrer"
+                aria-label="twitter"
+                ><svg class="tm-icon" width="20" height="20">
+                  <use
+                    href="./images/icons/symbol-defs.svg#tm-twitter"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="hero-item">
+              <a
+                class="t-link link"
+                href=""
+                target="_blank"
+                rel="noopener no-referrer"
+                aria-label="facebook"
+                ><svg class="tm-icon" width="20" height="20">
+                  <use
+                    href="./images/icons/symbol-defs.svg#tm-facebook"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="hero-item">
+              <a
+                class="t-link link"
+                href=""
+                target="_blank"
+                rel="noopener no-referrer"
+                aria-label="linkedin"
+                ><svg class="tm-icon" width="20" height="20">
+                  <use
+                    href="./images/icons/symbol-defs.svg#tm-linkedin"
+                  ></use></svg
+              ></a>
+            </li>
+          </ul> 
+  
+           -->
+          </div>
+          <div>
+            <h1 class="main-title">
+              EXPLORE<br />
+              DREAM<br />
+              DESTINATION
+            </h1>
+            <p class="hero-desc">
+              It encourages exploration of unfamiliar<br />
+              territories, embarcing diverse cultures and<br />
+              landscapes
+            </p>
+            <button class="hero-btn" id="btnHero">BOOK NOW</button>
+          </div>
+          <div class="searchRecommendation">
+            <div class="result" id="resultRec"></div>
+          </div>
         </div>
       </section>
     </main>
     <!-- Footer section -->
     <footer class="footer">
-      <a class="logo link" href="/">TravelBloom</a>
-      <p class="footer-copyrite">&#169; Copyright 2025</p>
+      <div class="container">
+        <a class="logo link" href="/">TravelBloom</a>
+        <p class="footer-copyrite">&#169; Copyright 2025</p>
+      </div>
     </footer>
 
     <script src="./travel_recommendation.js"></script>
