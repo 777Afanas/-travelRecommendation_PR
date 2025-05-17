@@ -47,7 +47,7 @@
         <input
           class="header-input"
           type="text"
-          id="conditionInput"
+          id="recommendationInput"
           placeholder="Enter a destination or keyword"
         />
         <button class="btn btn-search" id="btnSearch">Search</button>
@@ -57,7 +57,8 @@
     <!-- Main section -->
     <main>
       <!-- Hero section -->
-      <section class="hero">
+      <section class="hero"> 
+<!-- 
         <ul class="hero-list list">
           <li class="hero-item">
             <a
@@ -111,14 +112,22 @@
                 ></use></svg
             ></a>
           </li>
-        </ul>
-        <h1 class="main-title">EXPLORE DREAM DESTINATION</h1>
+        </ul> 
+
+         -->
+        <h1 class="main-title">EXPLORE<br /> 
+          DREAM<br />
+          DESTINATION</h1>
         <p class="hero-desc">
           It encourages exploration of unfamiliar<br />
           territories, embarcing diverse cultures and<br />
           landscapes
         </p>
         <button class="hero-btn" id="btnHero">BOOK NOW</button>
+
+        <div class="searchRecommendation">
+          <div class="result" id="resultRec"></div>
+        </div> 
       </section>
     </main>
     <!-- Footer section -->
@@ -126,6 +135,8 @@
       <a class="logo link" href="/">TravelBloom</a>
       <p class="footer-copyrite">&#169; Copyright 2025</p>
     </footer>
+
+    <script src="./travel_recommendation.js"></script>
 
     <!--    
     <div>         
