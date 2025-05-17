@@ -1,29 +1,36 @@
 const btnSearch = document.getElementById("btnSearch");
+const btnClear = document.getElementById("btnClear");
+const input = document.getElementById("recommendationInput");
+const resultDiv = document.getElementById("resultRec");
+
+btnSearch.addEventListener("click", searchRecommendation);
+btnClear.addEventListener("click", clearRecommendation);
 
 function searchRecommendation() {
-  const input = document
-    .getElementById("recommendationInput")
-    .value.toLowerCase();
-  const resultDiv = document.getElementById("resultRec");
+  const keywords = input.value.toLowerCase();
   resultDiv.innerHTML = "";
-  console.log(input);
 
   fetch("travel_recommendation_api.json")
     .then((response) => response.json())
     .then((data) => {
-      let keywords = input;
-      console.log(data[keywords]);
-      console.log(data.beaches);
+      if (!data[keywords]) {
+        resultDiv.innerHTML = "Condition not found.";
+        return;
+      }
 
       data[keywords].forEach(function (keyword) {
-        console.log(keywords);
         if (keywords === "beaches" || keywords === "temples") {
           // resultDiv.innerHTML += `<img src="${beach.imageUrl}" alt="hjh">`;
           resultDiv.innerHTML += `<h2>${keyword.name}</h2>`;
-
           resultDiv.innerHTML += `<p>${keyword.description}</p>`;
         } else if (keywords === "countries") {
           resultDiv.innerHTML += `<p>${keyword.name}</p>`;
+
+          keyword.cities.forEach(function (city) {
+            // resultDiv.innerHTML += `<img src="${city.imageUrl}" alt="hjh">`;
+            resultDiv.innerHTML += `<h2>${city.name}</h2>`;
+            resultDiv.innerHTML += `<p>${city.description}</p>`;
+          });
         } else {
           resultDiv.innerHTML = "Condition not found.";
         }
@@ -34,4 +41,8 @@ function searchRecommendation() {
       resultDiv.innerHTML = "An error occurred while fetching data.";
     });
 }
-btnSearch.addEventListener("click", searchRecommendation);
+
+function clearRecommendation() {
+  resultDiv.innerHTML = "";
+  input.value = "";
+}
